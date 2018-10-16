@@ -10,13 +10,26 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "dependencies": {
-    "nuxt": "^1.0.0"
+    "@storybook/addon-actions": "^3.4.11",
+    "@storybook/addon-centered": "^3.4.11",
+    "babel-core": "^6.26.3",
+    "node-sass": "^4.9.3",
+    "nuxt": "^1.0.0",
+    "nuxt-buefy": "^0.2.3",
     "openzeppelin-solidity": "^2.0.0-rc.2",
+    "sass-loader": "^7.1.0",
+    "vue": "^2.5.17",
+    "vue-material-design-icons": "^2.1.1"
   },
   "devDependencies": {
+    "@storybook/addon-knobs": "^3.4.11",
+    "@storybook/addon-options": "^3.4.11",
+    "@storybook/addon-viewport": "^3.4.11",
+    "@storybook/vue": "^3.4.11",
     "babel-eslint": "^8.2.1",
     "eslint": "^4.15.0",
     "eslint-friendly-formatter": "^3.0.0",

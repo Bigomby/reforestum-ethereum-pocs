@@ -1,10 +1,11 @@
 pragma solidity ^0.4.24;
 
 import "openzeppelin-solidity/contracts/token/ERC721/ERC721.sol";
+import "openzeppelin-solidity/contracts/token/ERC721/ERC721Enumerable.sol";
 
 import "./Counter.sol";
 
-contract RFT is ERC721 {
+contract RFT is ERC721, ERC721Enumerable {
   using Counter for Counter.Index;
 
   struct Token {

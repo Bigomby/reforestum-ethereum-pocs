@@ -1,23 +1,20 @@
 # reforestum-ethereum
 
-> Nuxt.js project
+> ERC721 tokenn + Nuxt.js (Vue.js + SSR) web client with web3.js
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
-$ npm install # Or yarn install
+$ yarn install
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+# serve with hot reload at localhost:3000 and use Ropsten contract address
+$ env RFT_CONTRACT_ADDRESS="0x8c829cdf26ec4c7b62f99a467bc6b662baf538f9" yarn dev
 
 # build for production and launch server
-$ npm run build
-$ npm start
+$ env RFT_CONTRACT_ADDRESS="0x8c829cdf26ec4c7b62f99a467bc6b662baf538f9" yarn build
+$ yarn start
 
 # generate static project
-$ npm run generate
+$ env RFT_CONTRACT_ADDRESS="0x8c829cdf26ec4c7b62f99a467bc6b662baf538f9" yarn generate
 ```
-
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
-

@@ -46,17 +46,18 @@ contract Certifications {
     certification.signature = Signature(_v, _r, _s);
   }
 
-
-
   function validateToken(
     uint _tokenId,
     address _issuer
   ) external view returns (uint64, uint64, uint8, bytes32, bytes32) {
+    require(_tokenId != 0, "Invalid token id");
+    require(_issuer != address(0), "Invalid issuer address");
+
     Issuer storage issuer = issuers[_issuer];
-    require(issuer.registered != address(0), "Invalid issuer");
+    require(issuer.registered < block.timestamp, "Invalid issuer");
 
     Certification storage certification = issuer.certifications[_tokenId];
-    require(certification.issued > 0, "Invalid certification");
+    require(certification.issued < block.timestamp, "No certification found");
 
     address addr = _validateCertification(certification.signature, _tokenId);
     require(addr == _issuer, "Invalid signature");

@@ -11,7 +11,7 @@ const wallet = Wallet.fromPrivateKey(privateKey);
 const provider = new WalletProvider(wallet, 'https://ropsten.infura.io/');
 
 module.exports = {
-  contracts_build_directory: `${__dirname}/client/assets`,
+  contracts_build_directory: `${__dirname}/client/assets/abi`,
   networks: {
     development: {
       host: '127.0.0.1',
